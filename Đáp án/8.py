@@ -5,28 +5,23 @@ class Student:
         self.gpa = gpa
 
     def show_info(self):
-        print(f"Name: {self.name}, Age: {self.age}, GPA: {self.gpa}")
+        print(f'Ten: {self.name}, Tuoi: {self.age}, GPA: {self.gpa}')
 
     def is_scholarship(self):
         return self.gpa >= 3.5
-
 class ITStudent(Student):
     def __init__(self, name, age, gpa, language):
         super().__init__(name, age, gpa)
         self.language = language
 
-    def display_info(self):
-        super().display_info()
-        print(f"Ngôn ngữ: {self.language}")
+    def show_info(self):
+        super().show_info()
+        print(f'Ngon ngu lap trinh: {self.language}')
 
     def is_excellent(self):
-        return self.gpa >= 3.8
+        return self.gpa >= 3.5
 
-s1 = Student("An", 20, 3.6)
-s1.display_info()
-print("Học bổng:", s1.is_scholarship())
-
-s2 = ITStudent("Bình", 21, 3.9, "Python")
-s2.display_info()
-print("Học bổng:", s2.is_scholarship())
-print("Xuất sắc:", s2.is_excellent())
+s1 = ITStudent('Long', 18, 3.9, 'Python')
+s1.show_info()
+print('Hoc bong: ', s1.is_scholarship())
+print('Xuat sac: ', s1.is_excellent())
