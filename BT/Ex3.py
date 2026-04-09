@@ -17,8 +17,6 @@ class Book:
 
     @price.setter
     def price(self, price):
-        if price < 0:
-            raise ValueError("Price phải >= 0")
         self._price = price
 
 
